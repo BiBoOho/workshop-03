@@ -4,12 +4,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans Lao', sans-serif;
+    scroll-behavior: smooth;
 }
 
 :root {
     --primary-color: rgb(255,92,92);
     /* --text-primary: rgb(250,250,250); */
-    --text-color: rab(66,66,66);
+    --text-color: rab(66,66,66,66);
     --text-color-second: rgba(66,66,66,0.7);
     --background: rgb(255,255,255);
     --box-shadow:  0 5px 20px 1px rgba(0,0,0,0.5); 
@@ -65,7 +66,7 @@ nav{
 
 a{
     margin-right: 25px;
-    color:var(--Primary-color);
+    color:var(--primary-color);
     text-decoration: none;
     border-bottom: 3px solid transparent;
     font-weight: bold;
@@ -109,7 +110,7 @@ a:hover, a:focus {
 }
 
 .slider{
-    background-color: #ccc;
+    background-color: var(--primary-color);
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -142,4 +143,34 @@ input:checked + .slider::before{
 .fa-solid{
     font-size: 30px;
     margin-right: 5px; 
+}
+
+.fa-brands {
+    font-size: 100px;
+    margin-right: 50px;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.fa-brands:hover{
+    color: var(--text-color);
+}
+
+.project-container {
+ display: flex;
+}
+
+.image-container{
+    border: 1px solid var(--text-color-second);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    padding: 10px 20px;
+    background: var(--background);
+    margin-right: 25px;
+    width: auto;
+}
+
+img {
+    width: 300px;
+    height: 300px;
 }
